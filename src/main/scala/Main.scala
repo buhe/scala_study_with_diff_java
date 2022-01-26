@@ -18,6 +18,17 @@ object XiaoM {
   z d "1"
 }
 
-class XiaoH(b: Int) extends XiaoM(b) {
-  def p() = println(c)
+trait Jump {
+  val j = "jump"
 }
+
+trait Talk {
+  val t = "talk"
+}
+
+class XiaoH(b: Int) extends XiaoM(b) with Jump with Talk{
+  def p() = println(c + j + t)
+}
+
+
+
